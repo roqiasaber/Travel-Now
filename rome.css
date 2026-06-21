@@ -1,0 +1,316 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Navbar */
+
+.navbar{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo{
+    font-size: 28px;
+    font-weight: bold;
+    color: #8b4513;
+}
+
+.plane-icon{
+    color: #f59e0b;
+}
+
+.nav-links a{
+    text-decoration: none;
+    color: #333;
+    margin-left: 25px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links .active{
+    color: #8b4513;
+}
+
+/* Hero Section */
+
+.hero-banner{
+     background-image: url("Rome.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 215px;
+    position: relative;
+}
+
+
+.hero-content{
+    position: relative;
+    color: white;
+    max-width: 600px;
+}
+
+.hero-content h1{
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.hero-content p{
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.hero-flag{
+    width: 45px;
+    vertical-align: middle;
+}
+
+.btn-primary{
+    background-color: #8b4513;
+    color: white;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.btn-primary:hover{
+    background-color: #6d3410;
+}
+
+/* Main */
+
+.container{
+    display: flex;
+    gap: 30px;
+    padding: 60px 8%;
+}
+
+.main-content{
+    flex: 3;
+}
+
+.sidebar{
+    flex: 1;
+}
+
+/* About Section */
+
+.about-section{
+    display: flex;
+    gap: 25px;
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+}
+
+.about-text{
+    flex: 1;
+}
+
+.about-text h2{
+    color: #8b4513;
+    margin-bottom: 15px;
+}
+
+.about-text p{
+    line-height: 1.8;
+}
+
+.about-image{
+    flex: 1;
+}
+
+.about-image img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+/* Attractions */
+
+.attractions-section h2{
+    margin-bottom: 25px;
+    color: #8b4513;
+}
+
+.cards-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 20px;
+}
+
+.card{
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.card:hover{
+    transform: translateY(-8px);
+}
+
+.card img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-body{
+    padding: 20px;
+}
+
+.card-body h3{
+    margin-bottom: 10px;
+}
+
+.card-body p{
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.card-body a{
+    text-decoration: none;
+    background-color: #8b4513;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+.card-body a:hover{
+    background-color: #6d3410;
+}
+
+/* Sidebar */
+
+.info-widget{
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+}
+
+.info-item{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.icon-box{
+    width: 50px;
+    height: 50px;
+    background-color: #fce7d6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 22px;
+}
+
+.info-text{
+    display: flex;
+    flex-direction: column;
+}
+
+.label{
+    color: #777;
+    font-size: 14px;
+}
+
+.value{
+    font-weight: bold;
+}
+
+.stars{
+    color: gold;
+}
+
+.info-widget a {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    background-color: #8b4513;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.info-widget a :hover{
+    background-color: #6d3410;
+}
+
+/* Footer */
+
+.footer{
+    background-color: #2c1810;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Responsive */
+
+@media(max-width:992px){
+
+    .container{
+        flex-direction: column;
+    }
+
+    .about-section{
+        flex-direction: column;
+    }
+
+    .hero-content h1{
+        font-size: 45px;
+    }
+}
+
+@media(max-width:768px){
+
+    .navbar{
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links{
+        display: flex;
+        gap: 15px;
+    }
+
+    .hero-content h1{
+        font-size: 35px;
+    }
+
+    .hero-content p{
+        font-size: 16px;
+    }
+
+    .container{
+        padding: 40px 5%;
+    }
+}
